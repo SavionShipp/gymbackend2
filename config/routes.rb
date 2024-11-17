@@ -21,11 +21,13 @@ Rails.application.routes.draw do
 
   post "/routines" => "routines#create"
 
-  post "users" => "users#create"
+   post "users" => "users#create"
 
    post "/sessions" => "sessions#create"
 
    post "/hearts" => "hearts#create"
 
    get "/hearts" => "hearts#index"
+
+   patch "/users" => "users#update"
 end

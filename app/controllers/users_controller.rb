@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name],
       email: params[:email],
+      image_url: params[:image_url]
       password: params[:password],
       password_confirmation: params[:password_confirmation]
     )
@@ -31,7 +32,7 @@ class UsersController < ApplicationController
 
   def update 
     @user = User.find_by_id(params[:id])
-    @euser.update(
+    @user.update(
       name: params[:name] || @user.name,
       email: params[:email] || @user.email,
       image_url: params[:image_url] || @user.image_url,

@@ -4,15 +4,15 @@ class HeartsController < ApplicationController
     @heart = Heart.new(
       user_id: params[:user_id],
       exercise_id: params[:exercise_id],
-      routine_id: param[:routine_id]
+      routine_id: params[:routine_id]
     )
     @heart.save
     render :show
   end
 
   def index
-    @heart = Heart.all
+    @hearts = Heart.all
     render :index
   end
-  
+
 end
