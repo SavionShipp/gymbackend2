@@ -1,2 +1,6 @@
-json.extract! heart, :id, :created_at, :updated_at
-json.url heart_url(heart, format: :json)
+json.user_id routine.user_id
+json.exercise_id routine.exercise_id
+json.routine_id heart.routine_id
+json.exercise routine.exercise
+json.user routine.user
+json.routine heart.routine
